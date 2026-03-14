@@ -1,28 +1,20 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "head-meta-base.njk" %}
     <title>Löwenstein Steuerberatung | Steuerberatung für Privatpersonen</title>
     <meta
       name="description"
       content="Löwenstein Steuerberatung berät Privatpersonen zu Einkommensteuer, Vermietung, Kapitalerträgen und privaten Entscheidungen mit klaren Empfehlungen und sicheren Prozessen."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    {% include "head-fonts-root.njk" %}
+    {% include "favicon-root.njk" %}
     <link rel="canonical" href="https://www.löwenstein-steuerberatung.de/" />
     <meta property="og:title" content="Löwenstein Steuerberatung | Steuerberatung für Privatpersonen" />
     <meta property="og:description" content="Löwenstein Steuerberatung berät Privatpersonen zu Einkommensteuer, Vermietung, Kapitalerträgen und privaten Entscheidungen mit klaren Empfehlungen und sicheren Prozessen." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.löwenstein-steuerberatung.de/" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Löwenstein Steuerberatung" />
+    {% include "head-og-site.njk" %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,43 +27,7 @@
           "description": "Steuerberatung für Privatpersonen",
           "inLanguage": "de-DE"
         },
-        {
-          "@type": "AccountingService",
-          "@id": "https://www.löwenstein-steuerberatung.de/#business",
-          "name": "Löwenstein Steuerberatung",
-          "description": "Steuerberatung für Privatpersonen zu Einkommensteuer, Vermietung, Kapitalerträgen und privaten Entscheidungen.",
-          "url": "https://www.löwenstein-steuerberatung.de/",
-          "email": "info@löwenstein-steuerberatung.de",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Finkenweg 5",
-            "postalCode": "56564",
-            "addressLocality": "Neuwied",
-            "addressCountry": "DE"
-          },
-          "priceRange": "€€",
-          "areaServed": { "@type": "Country", "name": "Deutschland" },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Steuerberatungsleistungen",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Einkommensteuererklärung" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Vermietung und Verpachtung" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Kapitalanlagen" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Nebengewerbe" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bescheidprüfung und Einsprüche" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategische Einzelberatung" } }
-            ]
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.löwenstein-steuerberatung.de/#founder",
-          "name": "Noah Löwenstein",
-          "jobTitle": "Steuerberater",
-          "worksFor": { "@id": "https://www.löwenstein-steuerberatung.de/#business" },
-          "knowsAbout": ["Einkommensteuer", "Vermietung", "Kapitalertragssteuer", "Nebengewerbe", "Steuerrecht"]
-        },
+        {% include "jsonld-business-person.njk" %}
         {
           "@type": "FAQPage",
           "@id": "https://www.löwenstein-steuerberatung.de/#faq",
@@ -131,21 +87,9 @@
     </script>
   </head>
   <body>
-    <div class="halo halo-a" aria-hidden="true"></div>
-    <div class="halo halo-b" aria-hidden="true"></div>
+    {% include "halo.njk" %}
 
-    <header class="nav-shell">
-      <a href="#top" class="logo" aria-label="Löwenstein Steuerberatung Startseite">
-        <img src="assets/Logo%202.svg" alt="Löwenstein Steuerberatung" />
-      </a>
-      <nav>
-        <a href="#concept">Konzept</a>
-        <a href="#services">Leistungen</a>
-        <a href="#assurance">Über mich</a>
-        <a href="blog/">Blog</a>
-        <a class="pill" href="#contact">Gespräch anfragen</a>
-      </nav>
-    </header>
+    {% include "nav-root.njk" %}
 
     <main id="top">
       <section class="hero section">
@@ -513,16 +457,7 @@
       </section>
     </main>
 
-    <footer>
-      <div>
-        <p>Löwenstein Steuerberatung</p>
-        <p>Steuerberatung für Privatpersonen aus Neuwied.</p>
-      </div>
-      <nav class="footer-links" aria-label="Rechtliches">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutzerklärung</a>
-      </nav>
-    </footer>
+    {% include "footer-root.njk" %}
 
     <script src="script.js"></script>
   </body>

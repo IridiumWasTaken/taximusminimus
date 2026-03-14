@@ -1,2 +1,4 @@
 *.pptx
 TODO.md
+node_modules/
+_site/

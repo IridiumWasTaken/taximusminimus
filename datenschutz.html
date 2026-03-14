@@ -1,32 +1,27 @@
+---
+permalink: /datenschutz.html
+---
+
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "head-meta-base.njk" %}
     <title>Datenschutzerklärung | Löwenstein Steuerberatung</title>
     <meta
       name="description"
       content="Datenschutzerklärung von Löwenstein Steuerberatung, Steuerberatung für Privatpersonen in Neuwied."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    {% include "head-fonts-root.njk" %}
+    {% include "favicon-root.njk" %}
     <link rel="canonical" href="https://www.löwenstein-steuerberatung.de/datenschutz.html" />
     <meta name="robots" content="noindex, follow" />
     <meta property="og:title" content="Datenschutzerklärung | Löwenstein Steuerberatung" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.löwenstein-steuerberatung.de/datenschutz.html" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Löwenstein Steuerberatung" />
+    {% include "head-og-site.njk" %}
   </head>
   <body>
-    <div class="halo halo-a" aria-hidden="true"></div>
-    <div class="halo halo-b" aria-hidden="true"></div>
+    {% include "halo.njk" %}
 
     <main class="legal-shell">
       <a class="legal-back" href="index.html">Zurück zur Startseite</a>

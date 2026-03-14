@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    {% include "head-meta-base.njk" %}
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ metaDescription }}" />
+    {% include "favicon-blog.njk" %}
+    <link rel="canonical" href="{{ canonicalUrl }}" />
+    <meta property="og:title" content="{{ ogTitle or pageTitle }}" />
+    <meta property="og:description" content="{{ ogDescription or metaDescription }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ canonicalUrl }}" />
+    {% include "head-og-site.njk" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "{{ canonicalUrl }}",
+          "headline": "{{ articleHeadline }}",
+          "description": "{{ jsonLdDescription or metaDescription }}",
+          "datePublished": "{{ datePublished }}",
+          "dateModified": "{{ dateModified or datePublished }}",
+          "author": { "@type": "Person", "@id": "https://www.löwenstein-steuerberatung.de/#founder", "name": "Noah Löwenstein" },
+          "publisher": { "@id": "https://www.löwenstein-steuerberatung.de/#business" },
+          "mainEntityOfPage": "{{ canonicalUrl }}",
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Löwenstein Steuerberatung", "item": "https://www.löwenstein-steuerberatung.de/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.löwenstein-steuerberatung.de/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "{{ breadcrumbName }}", "item": "{{ canonicalUrl }}" }
+          ]
+        }
+      ]
+    }
+    </script>
+    {% include "head-fonts-blog.njk" %}
+  </head>
+  <body>
+    {% include "halo.njk" %}
+
+    {% include "nav-blog.njk" %}
+
+    <main>
+      <div class="article-shell">
+        <a class="article-back" href="./">← Zurück zum Blog</a>
+
+        <div class="article-meta">
+          <span class="article-tag">{{ articleTag }}</span>
+          <span class="article-date">{{ articleDateDisplay }}</span>
+          <span class="article-date">· Noah Löwenstein</span>
+        </div>
+
+        <article class="article-body">
+          <h1>{{ articleHeadline }}</h1>
+
+          {{ content | safe }}
+
+          <div class="article-cta">
+            <h3>{{ ctaTitle }}</h3>
+            <p>{{ ctaText }}</p>
+            <a class="btn btn-solid" href="{{ ctaHref or '../#contact' }}">{{ ctaLabel or 'Kostenfreies Erstgespräch anfragen' }}</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    {% include "footer-blog.njk" %}
+
+    <script src="../script.js"></script>
+  </body>
+</html>

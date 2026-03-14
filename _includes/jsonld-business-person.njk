@@ -1,0 +1,37 @@
+{
+  "@type": "AccountingService",
+  "@id": "https://www.löwenstein-steuerberatung.de/#business",
+  "name": "Löwenstein Steuerberatung",
+  "description": "Steuerberatung für Privatpersonen zu Einkommensteuer, Vermietung, Kapitalerträgen und privaten Entscheidungen.",
+  "url": "https://www.löwenstein-steuerberatung.de/",
+  "email": "info@löwenstein-steuerberatung.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Finkenweg 5",
+    "postalCode": "56564",
+    "addressLocality": "Neuwied",
+    "addressCountry": "DE"
+  },
+  "priceRange": "€€",
+  "areaServed": { "@type": "Country", "name": "Deutschland" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Steuerberatungsleistungen",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Einkommensteuererklärung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Vermietung und Verpachtung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Kapitalanlagen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beratung Nebengewerbe" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bescheidprüfung und Einsprüche" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategische Einzelberatung" } }
+    ]
+  }
+},
+{
+  "@type": "Person",
+  "@id": "https://www.löwenstein-steuerberatung.de/#founder",
+  "name": "Noah Löwenstein",
+  "jobTitle": "Steuerberater",
+  "worksFor": { "@id": "https://www.löwenstein-steuerberatung.de/#business" },
+  "knowsAbout": ["Einkommensteuer", "Vermietung", "Kapitalertragssteuer", "Nebengewerbe", "Steuerrecht"]
+},
