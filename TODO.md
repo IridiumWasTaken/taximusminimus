@@ -13,7 +13,7 @@
 ## SEO / Technisch
 
 - [ ] Favicon erstellen und unter `assets/favicon.svg` (oder `.ico`) ablegen – aktuell wird die Datei verlinkt, existiert aber noch nicht
-- [ ] Echte Domain in allen `canonical`-URLs, OG-Tags, `sitemap.xml` und JSON-LD eintragen (aktuell `https://www.taximusminimus.com/`)
+- [ ] Echte Domain in allen `canonical`-URLs, OG-Tags, `sitemap.xml` und JSON-LD eintragen (aktuell `https://www.löwenstein-steuerberatung.de/`)
 - [ ] OG-Image erstellen und in allen Pages eintragen (`<meta property="og:image" content="...">`)
 - [ ] Google Business Profile anlegen (Name, Adresse, Telefon, Website, Öffnungszeiten)
 - [ ] Website bei Google Search Console anmelden und Sitemap einreichen

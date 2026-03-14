@@ -66,6 +66,6 @@ if (contactForm && formNote) {
     ].join('\n');
 
     formNote.textContent = 'Ihr Mailprogramm wird geöffnet und die Anfrage vorbereitet.';
-    window.location.href = `mailto:info@loewenstein-steuerberatung.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@löwenstein-steuerberatung.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }

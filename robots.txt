@@ -3,4 +3,4 @@ Allow: /
 Disallow: /impressum.html
 Disallow: /datenschutz.html
 
-Sitemap: https://www.taximusminimus.com/sitemap.xml
+Sitemap: https://www.löwenstein-steuerberatung.de/sitemap.xml
