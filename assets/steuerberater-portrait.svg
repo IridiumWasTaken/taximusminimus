@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1140" viewBox="0 0 920 1140" role="img" aria-labelledby="title desc">
+  <title id="title">Steuerberater Porträt</title>
+  <desc id="desc">Stilisiertes Porträt eines Steuerberaters in modernem Beratungsumfeld.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f9ff" />
+      <stop offset="100%" stop-color="#e9f2fc" />
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f4f60" />
+      <stop offset="100%" stop-color="#223845" />
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#edf4fb" />
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="1140" fill="url(#bg)" />
+
+  <ellipse cx="742" cy="178" rx="170" ry="106" fill="#b9d8f3" opacity="0.55" filter="url(#soft)" />
+  <ellipse cx="150" cy="914" rx="220" ry="146" fill="#b8e1d8" opacity="0.45" filter="url(#soft)" />
+
+  <rect x="120" y="98" width="680" height="944" rx="38" fill="#ffffff" opacity="0.74" />
+
+  <path d="M240 862c0-146 100-246 220-246s220 100 220 246v180H240V862z" fill="url(#jacket)" />
+  <path d="M368 630h184v300H368z" fill="url(#shirt)" />
+  <path d="M414 630h92l-46 106z" fill="#5a85b5" />
+
+  <circle cx="460" cy="430" r="176" fill="#f0c7a5" />
+  <path d="M282 424c0-112 80-198 178-198 98 0 178 86 178 198v28H282v-28z" fill="#3a4a56" />
+  <path d="M324 350c28-50 80-82 136-82 56 0 106 32 132 78 10 18 16 36 18 56-18-34-48-62-84-78-18-8-38-12-58-12-22 0-42 4-62 14-34 16-62 42-82 74 2-20 8-36 16-50z" fill="#2c3943" />
+
+  <ellipse cx="392" cy="442" rx="20" ry="14" fill="#ffffff" opacity="0.28" />
+  <ellipse cx="528" cy="442" rx="20" ry="14" fill="#ffffff" opacity="0.28" />
+  <circle cx="396" cy="442" r="6" fill="#25323c" />
+  <circle cx="524" cy="442" r="6" fill="#25323c" />
+  <path d="M416 520c26 18 62 18 88 0" stroke="#b67059" stroke-width="8" fill="none" stroke-linecap="round" />
+
+  <rect x="198" y="166" width="148" height="12" rx="6" fill="#7ca8cf" opacity="0.6" />
+  <rect x="198" y="188" width="104" height="12" rx="6" fill="#7ca8cf" opacity="0.45" />
+
+  <rect x="590" y="896" width="140" height="66" rx="14" fill="#eaf3fc" />
+  <rect x="608" y="918" width="104" height="10" rx="5" fill="#81abd0" opacity="0.72" />
+</svg>
