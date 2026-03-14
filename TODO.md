@@ -1,11 +1,11 @@
-# TODO – Taximus Minimus Website
+# TODO – Löwenstein Steuerberatung Website
 
 ## Pflichtangaben ergänzen
 
-- [ ] Echten Namen des Steuerberaters eintragen (aktuell überall „Taximus Minimus" als Platzhalter)
-- [ ] Echte Stadt eintragen (aktuell „Steuerstadt") – betrifft: `index.html`, `impressum.html`, `datenschutz.html`, `sitemap.xml`, `robots.txt`, JSON-LD in allen Blog-Artikeln
-- [ ] Straße und Hausnummer im Impressum und in der Datenschutzerklärung ergänzen
-- [ ] PLZ im Impressum und in der Datenschutzerklärung ergänzen
+- [x] Echten Namen des Steuerberaters eintragen (Noah Löwenstein / Löwenstein Steuerberatung)
+- [x] Echte Stadt eintragen (Neuwied) – betrifft: `index.html`, `impressum.html`, `datenschutz.html`, `sitemap.xml`, `robots.txt`, JSON-LD in allen Blog-Artikeln
+- [x] Straße und Hausnummer im Impressum und in der Datenschutzerklärung ergänzt (Finkenweg 5)
+- [x] PLZ im Impressum und in der Datenschutzerklärung ergänzt (56564)
 - [ ] Telefonnummer im Impressum und in der Datenschutzerklärung ergänzen
 - [ ] Zuständige Steuerberaterkammer im Impressum eintragen
 - [ ] Berufshaftpflichtversicherung (Name, Anschrift, Geltungsraum) im Impressum ergänzen

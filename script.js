@@ -54,7 +54,7 @@ if (contactForm && formNote) {
 
     const subject = `Erstgespräch: ${topic}`;
     const body = [
-      'Neue Anfrage über die Website von Taximus Minimus',
+      'Neue Anfrage über die Website von Löwenstein Steuerberatung',
       '',
       `Name: ${name}`,
       `E-Mail: ${email}`,
@@ -66,6 +66,6 @@ if (contactForm && formNote) {
     ].join('\n');
 
     formNote.textContent = 'Ihr Mailprogramm wird geöffnet und die Anfrage vorbereitet.';
-    window.location.href = `mailto:intro@taximusminimus.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@loewenstein-steuerberatung.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
