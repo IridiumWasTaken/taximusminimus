@@ -294,57 +294,24 @@
       </section>
 
       <section class="section">
+        {% set posts = collections.publishedPosts or [] %}
         <div class="services-intro reveal">
           <p class="label">Ratgeber</p>
           <h2>Gut informiert zu privaten Steuerfragen.</h2>
           <p>Praxisnahe Artikel zu den häufigsten Themen rund um Einkommensteuer, Vermietung, Kapitalanlagen und Nebengewerbe.</p>
         </div>
         <div class="blog-grid">
-          <a class="blog-card reveal" href="blog/steuererklarung-arbeitnehmer.html">
+          {% for post in posts | limit(4) %}
+          <a class="blog-card reveal" href="{{ post.url }}">
             <div class="blog-card-meta">
-              <span class="blog-card-tag">Einkommensteuer</span>
-              <span class="blog-card-date">März 2026</span>
+              <span class="blog-card-tag">{{ post.data.articleTag or "Steuern" }}</span>
+              <span class="blog-card-date">{{ post.data.articleDateDisplay or "Aktuell" }}</span>
             </div>
-            <h3>Steuererklärung als Arbeitnehmer: Wann sie sich lohnt und was zu beachten ist</h3>
-            <p>Ob und wann eine freiwillige Steuererklärung sinnvoll ist, welche Ausgaben absetzbar sind und worauf das Finanzamt besonders achtet.</p>
+            <h3>{{ post.data.articleHeadline or post.data.title }}</h3>
+            <p>{{ post.data.metaDescription or post.data.description or "Praxisnahe Einordnung zu einem steuerlichen Thema für Privatpersonen." }}</p>
             <span class="blog-card-link">Artikel lesen →</span>
           </a>
-          <a class="blog-card reveal" href="blog/vermietung-steuern.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-tag">Vermietung</span>
-              <span class="blog-card-date">März 2026</span>
-            </div>
-            <h3>Einkünfte aus Vermietung: So funktioniert die steuerliche Behandlung</h3>
-            <p>Was als Werbungskosten zählt, wie die Abschreibung funktioniert und welche Besonderheiten bei Sanierung oder Veräußerung gelten.</p>
-            <span class="blog-card-link">Artikel lesen →</span>
-          </a>
-          <a class="blog-card reveal" href="blog/nebengewerbe-steuern.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-tag">Nebengewerbe</span>
-              <span class="blog-card-date">März 2026</span>
-            </div>
-            <h3>Nebengewerbe neben dem Hauptberuf: Steuerliche Pflichten im Überblick</h3>
-            <p>Ab wann ein Gewerbe angemeldet werden muss, wie die EÜR funktioniert und wie Vorauszahlungen richtig eingeplant werden.</p>
-            <span class="blog-card-link">Artikel lesen →</span>
-          </a>
-          <a class="blog-card reveal" href="blog/kapitalertragsteuer.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-tag">Kapitalerträge</span>
-              <span class="blog-card-date">März 2026</span>
-            </div>
-            <h3>Kapitalertragsteuer und Freistellungsauftrag: Das Wichtigste im Überblick</h3>
-            <p>Wie Kapitalerträge besteuert werden, was der Freistellungsauftrag bewirkt und wann die Günstigerprüfung sich rechnet.</p>
-            <span class="blog-card-link">Artikel lesen →</span>
-          </a>
-          <a class="blog-card reveal" href="blog/steuererklarung-ki.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-tag">Digitalisierung</span>
-              <span class="blog-card-date">März 2026</span>
-            </div>
-            <h3>Steuererklärung per KI: Chancen, Grenzen und warum ein Steuerberater bleibt</h3>
-            <p>KI-Tools können vieles – aber nicht alles. Ein ehrlicher Vergleich, wann sie helfen und wo die Prüfung durch einen Fachmann unersetzlich bleibt.</p>
-            <span class="blog-card-link">Artikel lesen →</span>
-          </a>
+          {% endfor %}
         </div>
         <div class="blog-teaser-action reveal">
           <a class="btn btn-soft" href="blog/">Alle Artikel ansehen</a>

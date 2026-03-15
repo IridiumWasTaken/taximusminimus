@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "description": "Löwenstein Steuerberatung website built with Eleventy",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "clean": "rm -rf _site",
+    "dev": "npm run clean && npx @11ty/eleventy --serve",
+    "build": "npm run clean && npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
