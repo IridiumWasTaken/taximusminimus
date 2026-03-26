@@ -50,7 +50,18 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: .
+          path: _site
+
+      - name: Verify build output exists
+        run: |
+          if [ -d _site/_site ]; then
+            echo "Detected nested _site directory from artifact download, normalizing..."
+            cp -a _site/_site/. _site/
+            rm -rf _site/_site
+          fi
+          test -d _site || (echo "_site directory missing after artifact download" && exit 1)
+          test -f _site/index.html || (echo "_site/index.html missing after artifact download" && exit 1)
+          ls -la _site | head -n 50
 
       - name: Validate Cloudflare configuration
         env:
